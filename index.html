@@ -58,7 +58,7 @@
 <p>Welcome to Massive Platform, <a href='http://www.travelmassive.com'>Travel Massive's</a> open-source community and event platform.</p>
 
 <p>
-<img style="border: 1px solid #eee; padding: 4px;" src="images/massiveplatform_sample_chapter.png">
+<a href="images/massiveplatform_collage.jpg"><img style="width: 510px; border: 1px solid #eee; padding: 4px;" src="images/massiveplatform_collage.jpg"></a><br>
 </p>
 
 <p><h3>What Is Massive Platform?</h3>
@@ -70,16 +70,22 @@ Since our launch in January 2015, we've continued to develop the platform's feat
 </p>
 
 <p><h3>Who uses Massive Platform?</h3>
-Travel Massive - a community for travel industry insiders.
-Hardware Massive - hardwaremassive.com - a community for makers and inventors.
-Mappy Hour - mappyhour.org - a community for outdoor adventurers.
+
+<a href="https://travelmassive.com"><img style="width: 300px;" src="images/travelmassive_logo.svg"></a>
+Travel Massive (<a href="https://travelmassive.com">travelmassive.com</a>) - a community for travel industry insiders.
+<br>
+
+<a href="https://hardwaremassive.com"><img style="width: 300px;" src="images/hardwaremassive_logo.svg"></a>
+Hardware Massive (<a href="https://hardwaremassive.com">hardwaremassive.com</a>) - a community for makers and inventors.
+<br>
+
+<a href="https://mappyhour.org"><img style="width: 300px;" src="images/mappyhour_logo.svg"></a>
+Mappy Hour (<a href="https://mappyhour.org">mappyhour.org<a>) - a community for outdoor adventurers.
 Your community? Get in touch with us.
 </p>
 
 
 <p><h3>Platform Screenshots</h3>
-
-<a href="images/massiveplatform_collage.jpg"><img style="width: 510px;" src="images/massiveplatform_collage.jpg"></a><br>
 <a href="images/massiveplatform_chapter_profile.jpg"><img style="width: 510px;" src="images/massiveplatform_chapter_profile.jpg"></a><br>
 <a href="images/massiveplatform_company_profile.jpg"><img style="width: 510px;" src="images/massiveplatform_company_profile.jpg"></a><br>
 <a href="images/massiveplatform_feeds.jpg"><img style="width: 510px;" src="images/massiveplatform_feeds.jpg"></a><br>
@@ -89,7 +95,6 @@ Your community? Get in touch with us.
 <a href="images/massiveplatform_newsfeed.jpg"><img style="width: 510px;" src="images/massiveplatform_newsfeed.jpg"></a><br>
 <a href="images/massiveplatform_search.jpg"><img style="width: 510px;" src="images/massiveplatform_search.jpg"></a><br>
 </ul>
-
 </p>
 
 
@@ -177,7 +182,8 @@ Your community? Get in touch with us.
 
 <div style="clear: both;"></div>
 
-<div style='float: left;'>
+
+<div style='float: left; width: 50%;'>
 <h4>Community Search</h4>
 <ul>
   <li>Custom search module developed</li>
@@ -193,7 +199,7 @@ Your community? Get in touch with us.
 </ul>
 </div>
 
-<div style='float: left; width: 50%;'>
+<div style='float: left;'>
   <h4>Status Updates</h4>
   <ul>
   	<li>User status updates</li>
@@ -209,7 +215,7 @@ Your community? Get in touch with us.
 
 <div style="clear: both;"></div>
 
-<div style='float: left;'>
+<div style='float: left; width: 50%;'>
 <h4>Branding</h4>
 <ul>
   <li>Custom branding engine</li>
@@ -224,8 +230,6 @@ Your community? Get in touch with us.
 </ul>
 </div>
 
-<div style="clear: both;"></div>
-
 <div style='float: left;'>
 <h4>Notification Features</h4>
 <ul>
@@ -239,6 +243,8 @@ Your community? Get in touch with us.
   <li>Subscribe to Newsletter</li>
 </ul>
 </div>
+
+<div style="clear: both;"></div>
 
 <div style='float: left; width: 50%;'>
   <h4>Other Features</h4>
@@ -259,8 +265,6 @@ Your community? Get in touch with us.
   </ul>
 </div>
 
-<div style="clear: both;"></div>
-
 <div style='float: left;'>
 <h4>Drupal Features</h4>
 <ul>
@@ -273,6 +277,8 @@ Your community? Get in touch with us.
   <li>utf8mb4 support (emjois and Asian characters)
 </ul>
 </div>
+
+<div style="clear: both;"></div>
 
 <div style='float: left; width: 50%;'>
   <h4>External Integrations</h4>
@@ -311,7 +317,7 @@ Our Core focus is on developing features to support the needs of the Travel Mass
 <ul>
   <li>Signup help page for new users</li>
   <li>Who's nearby page</li>
-  <li>AMP pate template</li>
+  <li>AMP page template</li>
   <li>Bot integration</li>
   <li>Member/company badges</li>
 
@@ -339,11 +345,9 @@ Our Core focus is on developing features to support the needs of the Travel Mass
 <p>
 If you are developing with Ubuntu (our preference) you can get up and running easily by installing the following packages:
 <pre><code>sudo apt-get update
-sudo apt-get install mysql-server php5-mysql
+sudo apt-get install mysql-server
 sudo apt-get install nginx
-sudo apt-get install php5-fpm
-sudo apt-get install php5-gd
-sudo apt-get install php5-curl
+sudo apt-get install php5-fpm php5-mysql php5-gd php5-curl php5-json php5-readline
 sudo apt-get install drush
 # for sending mail, your favorite MTA
 sudo apt-get install postfix
