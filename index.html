@@ -71,15 +71,15 @@ Since our launch in January 2015, we've continued to develop the platform's feat
 
 <p><h3>Who uses Massive Platform?</h3>
 
-<a href="https://travelmassive.com"><img style="width: 300px;" src="images/travelmassive_logo.svg"></a>
+<a href="https://travelmassive.com"><img style="width: 200px;" src="images/travelmassive_logo.svg"></a><br>
 Travel Massive (<a href="https://travelmassive.com">travelmassive.com</a>) - a community for travel industry insiders.
-<br>
+<br><br>
 
-<a href="https://hardwaremassive.com"><img style="width: 300px;" src="images/hardwaremassive_logo.svg"></a>
+<a href="https://hardwaremassive.com"><img style="width: 200px;" src="images/hardwaremassive_logo.svg"></a><br>
 Hardware Massive (<a href="https://hardwaremassive.com">hardwaremassive.com</a>) - a community for makers and inventors.
-<br>
+<br><br>
 
-<a href="https://mappyhour.org"><img style="width: 300px;" src="images/mappyhour_logo.svg"></a>
+<a href="https://mappyhour.org"><img style="width: 200px;" src="images/mappyhour_logo.svg"></a><br>
 Mappy Hour (<a href="https://mappyhour.org">mappyhour.org<a>) - a community for outdoor adventurers.
 Your community? Get in touch with us.
 </p>
@@ -528,6 +528,14 @@ All results as returned as JSON.
   <li>drush mi --all --rollback --force (<span style='font-weight: bold;'>rollback and reload all sample data</span>)</li>
   <li>drush pm-enable tm_notifications (<span style='font-weight: bold;'>enable notifications after data</span>)</li>
   <li>drush search-reindex --immediate (<span style='font-weight: bold;'>re-index the search</span>)</li>
+</ul>
+</p>
+
+<p>
+<h4>Enabling Cron</h4>
+<ul>
+  <li>You must run the Drupal cron regularly to support tasks such as search indexing and email announcements.</li>
+  <li>drush run-cron --uri=http://yoursite.com --root=/path/to/massiveplatform</li>
 </ul>
 </p>
 
