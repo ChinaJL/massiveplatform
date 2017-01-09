@@ -79,17 +79,15 @@ Your community? Get in touch with us.
 
 <p><h3>Platform Screenshots</h3>
 
-<img style="width: 360px;" src="images/massiveplatform_collage.jpg">
-
-<ul>
-<li><img style="width: 360px;" src="images/massiveplatform_chapter_profile.jpg"></li>
-<li><img style="width: 360px;" src="images/massiveplatform_company_profile.jpg"></li>
-<li><img style="width: 360px;" src="images/massiveplatform_feeds.jpg"></li>
-<li><img style="width: 360px;" src="images/massiveplatform_frontpage.jpg"></li>
-<li><img style="width: 360px;" src="images/massiveplatform_member_profile.jpg"></li>
-<li><img style="width: 360px;" src="images/massiveplatform_mobile.jpg"></li>
-<li><img style="width: 360px;" src="images/massiveplatform_newsfeed.jpg"></li>
-<li><img style="width: 360px;" src="images/massiveplatform_search.jpg"></li>
+<a href="images/massiveplatform_collage.jpg"><img style="width: 510px;" src="images/massiveplatform_collage.jpg"></a><br>
+<a href="images/massiveplatform_chapter_profile.jpg"><img style="width: 510px;" src="images/massiveplatform_chapter_profile.jpg"></a><br>
+<a href="images/massiveplatform_company_profile.jpg"><img style="width: 510px;" src="images/massiveplatform_company_profile.jpg"></a><br>
+<a href="images/massiveplatform_feeds.jpg"><img style="width: 510px;" src="images/massiveplatform_feeds.jpg"></a><br>
+<a href="images/massiveplatform_frontpage.jpg"><img style="width: 510px;" src="images/massiveplatform_frontpage.jpg"></a><br>
+<a href="images/massiveplatform_member_profile.jpg"><img style="width: 510px;" src="images/massiveplatform_member_profile.jpg"></a><br>
+<a href="images/massiveplatform_mobile.jpg"><img style="width: 510px;" src="images/massiveplatform_mobile.jpg"></a><br>
+<a href="images/massiveplatform_newsfeed.jpg"><img style="width: 510px;" src="images/massiveplatform_newsfeed.jpg"></a><br>
+<a href="images/massiveplatform_search.jpg"><img style="width: 510px;" src="images/massiveplatform_search.jpg"></a><br>
 </ul>
 
 </p>
@@ -180,41 +178,6 @@ Your community? Get in touch with us.
 <div style="clear: both;"></div>
 
 <div style='float: left;'>
-<h4>Notification Features</h4>
-<ul>
-  <li>Personalised Newsfeed Emails (Weekly/Daily)</li>
-  <li>Member messaging via email</li>
-  <li>Welcome Approved members</li>
-  <li>Custom Chapter Announcements</li>
-  <li>Notify on new Follower</li>
-  <li>Notify on new Chapter Member</li>
-  <li>Notify on event RSVP/Waitlist</li>
-  <li>Subscribe to Newsletter</li>
-</ul>
-</div>
-
-<div style='float: left; width: 50%;'>
-  <h4>Other Features</h4>
-  <ul>
-    <li>Responsive HTML5 Design</li>
-    <li>Supports Retina Displays</li>
-    <li>YouTube covers for profiles</li>
-    <li>Customise contact page addresses</li>
-    <li>Wordpress Feeds</li>
-    <li>Community Reports</li>
-    <li>Video background front page</li>
-    <li>Clean HTML Emails</li>
-    <li>Mobile / Tablet / Desktop</li>
-    <li>Follow / Join Rate Limits</li>
-    <li>Search Content</li>
-    <li>Google Universal Analytics</li>
-    <li>OpenGraph/DublinCore meta</li>
-  </ul>
-</div>
-
-<div style="clear: both;"></div>
-
-<div style='float: left;'>
 <h4>Community Search</h4>
 <ul>
   <li>Custom search module developed</li>
@@ -259,6 +222,41 @@ Your community? Get in touch with us.
   <li>Customize by referrer</li>
   <li>Cascading branding rules</li>
 </ul>
+</div>
+
+<div style="clear: both;"></div>
+
+<div style='float: left;'>
+<h4>Notification Features</h4>
+<ul>
+  <li>Personalised Newsfeed Emails</li>
+  <li>Member messaging via email</li>
+  <li>Welcome Approved members</li>
+  <li>Custom Chapter Announcements</li>
+  <li>Notify on new Follower</li>
+  <li>Notify on new Chapter Member</li>
+  <li>Notify on event RSVP/Waitlist</li>
+  <li>Subscribe to Newsletter</li>
+</ul>
+</div>
+
+<div style='float: left; width: 50%;'>
+  <h4>Other Features</h4>
+  <ul>
+    <li>Responsive HTML5 Design</li>
+    <li>Supports Retina Displays</li>
+    <li>YouTube covers for profiles</li>
+    <li>Customise contact page addresses</li>
+    <li>Wordpress Feeds</li>
+    <li>Community Reports</li>
+    <li>Video background front page</li>
+    <li>Clean HTML Emails</li>
+    <li>Mobile / Tablet / Desktop</li>
+    <li>Follow / Join Rate Limits</li>
+    <li>Search Content</li>
+    <li>Google Universal Analytics</li>
+    <li>OpenGraph/DublinCore meta</li>
+  </ul>
 </div>
 
 <div style="clear: both;"></div>
@@ -345,6 +343,7 @@ sudo apt-get install mysql-server php5-mysql
 sudo apt-get install nginx
 sudo apt-get install php5-fpm
 sudo apt-get install php5-gd
+sudo apt-get install php5-curl
 sudo apt-get install drush
 # for sending mail, your favorite MTA
 sudo apt-get install postfix
@@ -417,8 +416,13 @@ Restart php5-fpm service after modifying php.ini
 
 <p>
 <h4>5. Import Sample MySQL database</h4>
+<b>Note:</b> A utf8mb4 sample database is also available to support emojis and Asian characters. Your MySQL installation will need to support utf8mb4 to import this, and you will need to uncomment the utf8mb4 settings (see sample settings.php). This is recommended for new installations.<br>
 <pre><code>cd /var/www/massiveplatform
-zcat massiveplatform_setup_files/massiveplatform.sql.gz | mysql -u massiveplatform -p massiveplatform 
+zcat massiveplatform_setup_files/massiveplatform.utf8mb4.sql.gz | mysql -u massiveplatform -p massiveplatform
+</code></pre>
+Non utf8mb4 databases:
+<pre><code>cd /var/www/massiveplatform
+zcat massiveplatform_setup_files/massiveplatform.sql.gz | mysql -u massiveplatform -p massiveplatform
 </code></pre>
 </p>
 
@@ -448,16 +452,16 @@ Ok, now point your browser to your web server. If you are developing on your loc
 </p>
 <p>
 If you have succesfully installed Massive Platform, your web browser should look something like this:<br><br>
-<img src="images/massiveplatform_first_screen.png">
+<img style="width: 510px;" src="images/massiveplatform_installed_screen.jpg">
 </p>
 
 <p>
 <h4>9. Default Logins</h4>
 Here are the default logins for the site (in "username / password" format):
 <ul>
+  <li>Moderator account: "moderator / moderator"</li>
   <li>Demo account: "demo / demo"</li>
-  <li>Admin account: "admin / testing"</li>
-  <li>Sample users: "username / massive" (example: ian / massive)</li>
+  <li>Admin account: "admin / massive"</li>
 </ul>
 </p>
 
@@ -501,6 +505,8 @@ There are a number of user roles that come shipped to allow for management of th
     <li>api/public/test - API test page</li>
     <li>api/public/stats - basic stats</li>
     <li>api/public/chapters_lat_lon - chapters lat and lon</li>
+    <li>api/public/chapter_leaders - list of chapter leaders</li>
+    <li>api/public/events - list of events</li>
   </ul>
 All results as returned as JSON.
 <br>For JSONP append ?callback=myfunction to the URL. 
@@ -525,7 +531,6 @@ All results as returned as JSON.
 <h4>Other tips and tricks</h4>
 <ul>
   <li>To enable Twitter, edit sites/default/settings.php and include your Twitter OAuth Settings</li>
-  <li>When saving .csv for migration imports, ensure the file has Linux/PHP friendly line breaks and is UTF8 format</li>
   <li>To edit SASS stylesheets you'll need compass installed (apt-get install compass), then run "compass watch sites/all/themes/tm" to update css files</li>
   <li>For testing emails, add the following to sites/default/settings.php to write emails to /tmp/DevelMailLog:<br>$conf['mail_system'] = array(
 'default-system' => 'DevelMailLog',
@@ -562,6 +567,7 @@ All results as returned as JSON.
   <li>Ian C - project lead, information architecture, product launch, lots of stuff</span></li>
   <li>Robyn Stanley (<a href="https://github.com/rumpledelf" class="user-mention">@rumpledelf</a>) - bug fixing, event management, email announcements</span></li>
   <li>Ryan Cross (<a href="https://github.com/rcross" class="user-mention">@rcross</a>) - final stage project management</span></li>
+  <li>Dean Rollins (<a href="https://github.com/drollins" class="user-mention">@drollins</a>) - newsfeed emails and search sort</span></li>
 </ul>
 </p>
 
